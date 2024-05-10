@@ -48,3 +48,32 @@ ORDER BY trans_date DESC;
 SELECT * 
 FROM BankCustomerAccountView
 WHERE bank_id = 361473636;
+
+
+-- Test Audit table
+-- Insert a value into transactions table
+INSERT INTO Transactions (trans_id, trans_amount, is_deposit, account_num, trans_date)
+VALUES (709392363, 100.00, 1, 420728786, GETDATE());
+
+-- Modify a inserted transaction
+UPDATE Transactions
+SET trans_amount = 150.00
+WHERE trans_id = 709392363;
+--Check audit table for Transactions log
+SELECT * FROM TransactionAudit;
+
+
+--Testing query for store procedure
+-- Declare table variable to store output
+DECLARE @Output TABLE (
+    CustomerID INT,
+    CustomerName VARCHAR(50),
+    TotalBalance DECIMAL(38, 2)
+);
+
+-- Execute stored procedure and insert output into table variable
+INSERT INTO @Output
+EXEC GetCustomerTotalBalance @customer_id = 481901357;
+
+-- Print results
+SELECT * FROM @Output;
