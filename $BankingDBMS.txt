@@ -1,16 +1,12 @@
 /*
-** Team: Final_Project_1
-** Authors Name-ID : Krishna Singh Rajput - 1229962853
-**                 : Nidhi Prakashbhai Mistry - 1230085261
-** Course: IFT/530
 ** SQL Server version: Microsoft SQL Server 2022
 */
 
 --CREATE A DATABASE FOR BANKING
-CREATE DATABASE Final_Project_1;
+CREATE DATABASE Banking;
 GO
 
-USE Final_Project_1;
+USE Banking;
 GO
 
 -- Create Bank table
@@ -298,7 +294,7 @@ GROUP BY
 
 
 -- View Query 1: Retrieve Customer Information with Account Details
-USE Final_Project_1;
+USE Banking;
 GO
 
 CREATE VIEW CustomerAccountDetailsView AS
@@ -316,14 +312,14 @@ INNER JOIN
     Accounts a ON c.customer_id = a.customer_id;
 
 --Testing query for View 1
-USE Final_Project_1;
+USE Banking;
 GO
 SELECT *
 FROM CustomerAccountDetailsView
 WHERE customer_id = 481901357;
 
 -- View Query 2: Retrieve Transaction History for a Specific Account
-USE Final_Project_1;
+USE Banking;
 GO
 
 CREATE VIEW AccountTransactionHistoryView AS
@@ -346,7 +342,7 @@ WHERE account_num = 753040214
 ORDER BY trans_date DESC;
 
 -- Query 3: Retrieve Customer and Account Information for a Specific Bank
-USE Final_Project_1;
+USE Banking;
 GO
 
 CREATE VIEW BankCustomerAccountView AS
@@ -369,14 +365,14 @@ INNER JOIN
 
 --Testing query for View 3
 
-USE Final_Project_1;
+USE Banking;
 GO
 SELECT * 
 FROM BankCustomerAccountView
 WHERE bank_id = 361473636;
 
 
-USE Final_Project_1;
+USE Banking;
 GO
 
 -- Create Audit table for Transactions
@@ -454,7 +450,7 @@ BEGIN
 END;
 GO
 
-USE Final_Project_1;
+USE Banking;
 GO
 -- Test Audit table
 -- Insert a value into transactions table
@@ -502,7 +498,7 @@ BEGIN
 END;
 GO
 
-USE Final_Project_1;
+USE Banking;
 GO
 --Testing query for store procedure
 -- Declare table variable to store output
@@ -544,7 +540,7 @@ END;
 GO
 
 
-USE Final_Project_1;
+USE Banking;
 GO
 -- Drop the temporary table if it already exists
 IF OBJECT_ID('tempdb..#CustomerBalanceWithInterest') IS NOT NULL
@@ -583,7 +579,7 @@ SELECT * FROM #CustomerBalanceWithInterest;
 DROP TABLE #CustomerBalanceWithInterest;
 
 --Cursor code with testing query
-USE Final_Project_1;
+USE Banking;
 GO
 
 -- Implementing cursor to calculate the total deposit and withdrawal based on the transactions.
@@ -652,10 +648,3 @@ DEALLOCATE trans_cursor;
 SELECT * FROM #AccountSummary;
 -- Drop temporary table
 DROP TABLE #AccountSummary;
-
-
-
-
-
-
-
