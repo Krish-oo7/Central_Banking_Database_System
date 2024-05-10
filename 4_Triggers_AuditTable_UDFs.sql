@@ -1,15 +1,13 @@
-/*
-** Team: Final_Project_1
-** Authors Name-ID : Krishna Singh Rajput - 1229962853
-**                 : Nidhi Prakashbhai Mistry - 1230085261
-** Course: IFT/530
-** SQL Server version: Microsoft SQL Server 2022
-*/
-
-USE Final_Project_1;
+-- Creating Audit Table, Triggers, and User Defined Function (UDFs)
+USE Banking;
 GO
-
--- Create Audit table for Transactions
+/*
+The TransactionAudit table tracks transactions with audit_id as a primary key, storing trans_id, action (insert, delete, update), and audit_date. 
+Triggers on the Transactions table automatically insert audit records upon insert, delete, or update operations, maintaining a comprehensive log of 
+transactional activities for auditing purposes.
+*/
+  
+-- Creating Audit table for Transactions
 CREATE TABLE TransactionAudit (
   audit_id INT IDENTITY(1,1) PRIMARY KEY,
   trans_id INT NOT NULL,
@@ -24,7 +22,7 @@ IF OBJECT_ID('InsertTransaction', 'P') IS NOT NULL
     DROP PROCEDURE InsertTransaction;
 GO
 
--- Create stored procedure for inserting transactions and logging audit
+-- Creating stored procedure for inserting transactions and logging audit
 CREATE PROCEDURE InsertTransaction (
     @trans_amount DECIMAL(10, 2),
     @is_deposit BIT,
@@ -48,7 +46,7 @@ BEGIN
 END;
 GO
 
--- Create UDF to calculate total balance of customer's accounts
+-- Creating UDF to calculate total balance of customer's accounts
 CREATE FUNCTION CalculateTotalBalance (
     @customer_id INT
 )
@@ -70,7 +68,7 @@ IF OBJECT_ID('CalculateTotalBalance', 'FN') IS NOT NULL
     DROP FUNCTION CalculateTotalBalance;
 GO
 
--- Create trigger to log transaction insertions into the audit table
+-- Creating trigger to log transaction insertions into the audit table
 CREATE TRIGGER LogTransactionAudit
 ON Transactions
 AFTER INSERT
@@ -86,8 +84,7 @@ IF OBJECT_ID('DeleteTransactionAudit', 'TR') IS NOT NULL
     DROP TRIGGER DeleteTransactionAudit;
 GO
 
-
--- Create trigger to log transaction deletions into the audit table
+-- Creating trigger to log transaction deletions into the audit table
 CREATE TRIGGER DeleteTransactionAudit
 ON Transactions
 AFTER DELETE
@@ -99,7 +96,7 @@ BEGIN
 END;
 GO
 
--- Create trigger to log transaction updates into the audit table
+-- Creating trigger to log transaction updates into the audit table
 CREATE TRIGGER UpdateTransactionAudit
 ON Transactions
 AFTER UPDATE
@@ -110,13 +107,3 @@ BEGIN
     FROM inserted;
 END;
 GO
-
-
-
-
-
-
-
-/*The TransactionAudit table tracks transactions with audit_id as a primary key, storing trans_id, action (insert, delete, update), and audit_date. 
-Triggers on the Transactions table automatically insert audit records upon insert, delete, or update operations, maintaining a comprehensive log of 
-transactional activities for auditing purposes.*/
