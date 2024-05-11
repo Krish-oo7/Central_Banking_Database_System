@@ -3,7 +3,7 @@
 The aim of this project is to develop and implement a comprehensive database system tailored to centralize the banking industry. This database, implemented using the `Microsoft SQL Server` database server, will include structured tables to manage critical information required for banking operations, covering areas such as bank details, ATM data, customer profiles, account records, transaction details, and card information.
 
 ## ER Diagram
-![alt text].(https://github.com/Krish-oo7/Central_Banking_Database_System/blob/main/Misc/ER%20Diagram.png)
+![alt text](https://github.com/Krish-oo7/Central_Banking_Database_System/blob/main/Misc/ER%20Diagram.png)
 
 ## Phase 1
 1. Create a database.
