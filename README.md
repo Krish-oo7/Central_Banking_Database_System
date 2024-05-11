@@ -33,7 +33,7 @@ Sr| TABLE_NAME | COLUMN_NAME | DATA_TYPE | CHARACTER_MAXIMUM_LENGTH | NUMERIC_PR
 17 | Cards|	card_id	   |  int|	NULL|	10|	0
 18 | Cards|	card_num	|char	|16|	NULL|	NULL
 19 | Cards|	pin	|char	|4	|NULL	|NULL
-20 | Cards|	account_num	|int	NULL	|10|	0
+20 | Cards|	account_num	|int	| NULL	|10|	0
 21 | Transactions|	trans_id	|int	|NULL|	10	|0
 22 | Transactions|	trans_amount	|decimal|	NULL|	10|	2
 23 | Transactions|	is_deposit	|bit	|NULL	|NULL	|NULL
