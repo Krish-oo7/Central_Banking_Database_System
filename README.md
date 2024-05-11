@@ -21,24 +21,24 @@ The aim of this project is to develop and implement a comprehensive database sys
 5 |    ATMs	   | bill_limit  | smallint  |           NULL	        |         5         |     0
 6 |    ATMs	   | cash_limit  | smallint  |           NULL	        |         5 	       |     0
 7 |    ATMs	   |   bank_id	  |   int	  |           NULL	        |        10	       |     0
-8	Customers	customer_id	int	NULL	10	0
-9	Customers	first_name	varchar	10	NULL	NULL
-10	Customers	last_name	varchar	10	NULL	NULL
-11	Customers	address	varchar	50	NULL	NULL
-12	Customers	phone_num	varchar	15	NULL	NULL
-13	Accounts	account_num	int	NULL	10	0
-14	Accounts	balance	decimal	NULL	38	2
-15	Accounts	bank_id	int	NULL	10	0
-16	Accounts	customer_id	int	NULL	10	0
-17	Cards	card_id	int	NULL	10	0
-18	Cards	card_num	char	16	NULL	NULL
-19	Cards	pin	char	4	NULL	NULL
-20	Cards	account_num	int	NULL	10	0
-21	Transactions	trans_id	int	NULL	10	0
-22	Transactions	trans_amount	decimal	NULL	10	2
-23	Transactions	is_deposit	bit	NULL	NULL	NULL
-24	Transactions	account_num	int	NULL	10	0
-25	Transactions	trans_date	datetime	NULL	NULL	NULL
+8 | Customers	|customer_id	|int|	NULL|	10|	0
+9| Customers	|first_name|	varchar|	10|	NULL|	NULL
+10 | Customers|	last_name|	varchar|	10|	NULL|	NULL
+11 | Customers|	address	|varchar|	50|	NULL|	NULL
+12 | Customers|	phone_num |	varchar	|15|	NULL|	NULL
+13 | Accounts|	account_num |	int|	NULL|	10|	0
+14 | Accounts|	balance	  |  decimal|	NULL|	38|	2
+15 | Accounts|	bank_id	  |  int|	NULL|	10|	0
+16 | Accounts|	customer_id	|int|	NULL|	10|	0
+17 | Cards|	card_id	   |  int|	NULL|	10|	0
+18 | Cards|	card_num	|char	|16|	NULL|	NULL
+19 | Cards|	pin	|char	|4	|NULL	|NULL
+20 | Cards|	account_num	|int	NULL	|10|	0
+21 | Transactions|	trans_id	|int	|NULL|	10	|0
+22 | Transactions|	trans_amount	|decimal|	NULL|	10|	2
+23 | Transactions|	is_deposit	|bit	|NULL	|NULL	|NULL
+24 | Transactions|	account_num	|int	|NULL	|10	|0
+25 | Transactions|	trans_date	|datetime|	NULL|	NULL|	NULL
 ![image](https://github.com/Krish-oo7/Central_Banking_Database_System/assets/123626302/8735010e-e6b6-4931-bae7-5b4bce3e3c5c)
 
 ## Phase 2
