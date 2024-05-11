@@ -46,10 +46,10 @@ Sr| TABLE_NAME |COLUMN_NAME|DATA_TYPE|CHARACTER_MAX_LENGTH|NUMERIC_PRECISION |NU
    - The "BankCustomerAccountView" combines `Customers`, `Accounts`, and `Bank` tables to display customer details (ID, name, address, phone) and account information (number, balance) for a specific bank.
 2. Create an Audit Table for lookup the table.
    - The `TransactionAudit` table logs transactional activities (trans_id, action, audit_date) using triggers on the Transactions table for comprehensive auditing.
-3. Create a Store Procedure.
+3. Create a User Defined function (UDF).
+   - The `CalculateTotalBalance` UDF calculates the total balance across all accounts from different banks for a specified Customer ID.
+4. Create a Store Procedure.
    - The stored procedure `GetCustomerTotalBalance` calculates and returns the total balance of accounts for a specified customer, offering a concise financial summary with their name.
-4. Create a User Defined function (UDF).
-   - The `CalculateAccountInterest` UDF computes interest for an account balance using a specified interest rate, facilitating financial calculations with accrued interest determination.
 5. Create a Cursor for this database.
    - This script calculates account deposit and withdrawal totals using a cursor on the Transactions table, updating a temporary table `#AccountSummary` and displaying the results, beneficial for account statement generation and transaction trend analysis.
   
