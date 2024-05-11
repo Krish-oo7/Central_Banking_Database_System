@@ -39,7 +39,6 @@ The aim of this project is to develop and implement a comprehensive database sys
 23 | Transactions|	is_deposit	|bit	|NULL	|NULL	|NULL
 24 | Transactions|	account_num	|int	|NULL	|10	|0
 25 | Transactions|	trans_date	|datetime|	NULL|	NULL|	NULL
-![image](https://github.com/Krish-oo7/Central_Banking_Database_System/assets/123626302/8735010e-e6b6-4931-bae7-5b4bce3e3c5c)
 
 ## Phase 2
 1. Create meaningful views that provide different types of information.
