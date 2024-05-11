@@ -11,7 +11,7 @@ The aim of this project is to develop and implement a comprehensive database sys
 3. Populate all the tables.
 
 ### Tables Detail
-![alt text](https://github.com/Krish-oo7/Central_Banking_Database_System/blob/main/Tables.png)
+![alt text](https://github.com/Krish-oo7/Central_Banking_Database_System/blob/main/Misc/Tables.png)
 
 ## Phase 2
 1. Create meaningful views that provide different types of information.
