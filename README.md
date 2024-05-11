@@ -26,3 +26,7 @@ The aim of this project is to develop and implement a comprehensive database sys
    - The `CalculateAccountInterest` UDF computes interest for an account balance using a specified interest rate, facilitating financial calculations with accrued interest determination.
 5. Create a Cursor for this database.
    - This script calculates account deposit and withdrawal totals using a cursor on the Transactions table, updating a temporary table `#AccountSummary` and displaying the results, beneficial for account statement generation and transaction trend analysis.
+  
+## Testing
+Create the `TestingQueries` file containing queries to test all the operations mentioned in Phase 1 and Phase 2.
+
