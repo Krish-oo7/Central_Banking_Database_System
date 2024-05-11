@@ -11,8 +11,8 @@ The aim of this project is to develop and implement a comprehensive database sys
 3. Populate all the tables.
 
 ### Tables Detail
-Sr| TABLE_NAME | COLUMN_NAME | DATA_TYPE | CHARACTER_MAXIMUM_LENGTH | NUMERIC_PRECISION | NUMERIC_SCALE
---| ---------- | ----------- | --------- | ------------------------ | ----------------- | -------------
+Sr| TABLE_NAME |COLUMN_NAME|DATA_TYPE|CHARACTER_MAX_LENGTH|NUMERIC_PRECISION |NUMERIC_SCALE
+--| ---------- | ----------- | --------- | ------------------------ | ----------------- | --------
 1 |    Bank	   |   bank_id   |   int	  |           NULL	        |        10	       |     0
 2 |    Bank	   |  bank_name  |  varchar  |            50	           |       NULL	       |    NULL
 3 |    ATMs	   |   atm_id	  |   int	  |           NULL	        |        10	       |     0
