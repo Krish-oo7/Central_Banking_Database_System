@@ -46,29 +46,7 @@ BEGIN
 END;
 GO
 
--- Creating UDF to calculate total balance of customer's accounts
-CREATE FUNCTION CalculateTotalBalance (
-    @customer_id INT
-)
-RETURNS DECIMAL(38, 2)
-AS
-BEGIN
-    DECLARE @total_balance DECIMAL(38, 2);
-    
-    SELECT @total_balance = SUM(balance)
-    FROM Accounts
-    WHERE customer_id = @customer_id;
-    
-    RETURN ISNULL(@total_balance, 0);
-END;
-GO
-
--- Drop UDF if it already exists
-IF OBJECT_ID('CalculateTotalBalance', 'FN') IS NOT NULL
-    DROP FUNCTION CalculateTotalBalance;
-GO
-
--- Creating trigger to log transaction insertions into the audit table
+  -- Creating trigger to log transaction insertions into the audit table
 CREATE TRIGGER LogTransactionAudit
 ON Transactions
 AFTER INSERT
@@ -107,3 +85,26 @@ BEGIN
     FROM inserted;
 END;
 GO
+
+-- Creating UDF to calculate total balance of customer's accounts
+CREATE FUNCTION CalculateTotalBalance (
+    @customer_id INT
+)
+RETURNS DECIMAL(38, 2)
+AS
+BEGIN
+    DECLARE @total_balance DECIMAL(38, 2);
+    
+    SELECT @total_balance = SUM(balance)
+    FROM Accounts
+    WHERE customer_id = @customer_id;
+    
+    RETURN ISNULL(@total_balance, 0);
+END;
+GO
+
+-- Drop UDF if it already exists
+IF OBJECT_ID('CalculateTotalBalance', 'FN') IS NOT NULL
+    DROP FUNCTION CalculateTotalBalance;
+GO
+
