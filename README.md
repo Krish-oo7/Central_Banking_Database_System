@@ -3,6 +3,10 @@
 The aim of this project is to develop and implement a comprehensive database system tailored to centralize the banking industry. This database, implemented using the `Microsoft SQL Server` database server, will include structured tables to manage critical information required for banking operations, covering areas such as bank details, ATM data, customer profiles, account records, transaction details, and card information.
 
 ## ER Diagram
+Key Features of the Database Schema:
+1. Customers can have multiple bank accounts in different banks with same user id.
+2. There are multiple banks and each banks offers ATMs.
+3. Transaction of a particular user from all banks accounts can be tracked.
 ![alt text](https://github.com/Krish-oo7/Central_Banking_Database_System/blob/main/Misc/ER%20Diagram.png)
 
 ## Phase 1
