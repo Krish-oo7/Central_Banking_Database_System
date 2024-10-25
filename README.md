@@ -1,4 +1,4 @@
-# Central Banking Database System
+# FinanceHub: A Central Banking Database
 ## Purpose
 The aim of this project is to develop and implement a comprehensive database system tailored to centralize the banking industry. This database, implemented using the `Microsoft SQL Server` database server, will include structured tables to manage critical information required for banking operations, covering areas such as bank details, ATM data, customer profiles, account records, transaction details, and card information.
 
